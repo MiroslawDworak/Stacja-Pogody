@@ -1,0 +1,29 @@
+{
+  "name": "Widełka",
+  "timestamp": "2026-01-30 21:15:32",
+  "main": {
+    "temp": -4.18,
+    "feels_like": -10.85,
+    "humidity": 86,
+    "pressure": 1011
+  },
+  "weather": [
+    {
+      "description": "zachmurzenie duże"
+    }
+  ],
+  "wind": {
+    "speed": 6.17,
+    "gust": 0
+  },
+  "sys": {
+    "sunrise": 1769753391,
+    "sunset": 1769786486
+  },
+  "visibility": 10000,
+  "moon": "Przybywający wypukły",
+  "kalendarz": {
+    "imieniny": "Macieja, Martyny",
+    "swieto": "Dzień powszedni"
+  }
+}
