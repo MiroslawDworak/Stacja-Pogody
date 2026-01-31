@@ -1,6 +1,6 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-01-31 12:26:52",
+  "timestamp": "2026-01-31 12:36:52",
   "main": {
     "temp": -10.18,
     "feels_like": -17.18,
@@ -9,11 +9,11 @@
   },
   "weather": [
     {
-      "description": "zachmurzenie umiarkowane"
+      "description": "zachmurzenie duże"
     }
   ],
   "wind": {
-    "speed": 6.69,
+    "speed": 5.14,
     "gust": 0
   },
   "sys": {
