@@ -1,11 +1,11 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-01-30 22:15:58",
+  "timestamp": "2026-01-31 10:26:47",
   "main": {
-    "temp": -4.18,
-    "feels_like": -10.56,
-    "humidity": 86,
-    "pressure": 1011
+    "temp": -10.18,
+    "feels_like": -17.18,
+    "humidity": 73,
+    "pressure": 1015
   },
   "weather": [
     {
@@ -17,13 +17,13 @@
     "gust": 0
   },
   "sys": {
-    "sunrise": 1769753391,
-    "sunset": 1769786486
+    "sunrise": 1769839708,
+    "sunset": 1769872990
   },
   "visibility": 10000,
   "moon": "Przybywający wypukły",
   "kalendarz": {
-    "imieniny": "Macieja, Martyny",
+    "imieniny": "Jana, Marceli",
     "swieto": "Dzień powszedni"
   }
 }
