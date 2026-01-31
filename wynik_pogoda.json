@@ -1,11 +1,11 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-01-31 16:47:02",
+  "timestamp": "2026-01-31 16:57:02",
   "main": {
     "temp": -10.18,
     "feels_like": -17.18,
     "humidity": 73,
-    "pressure": 1016
+    "pressure": 1017
   },
   "weather": [
     {
