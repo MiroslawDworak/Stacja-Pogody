@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja Pogodowa Widełka</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e1e1e">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="weather-card" class="card">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Wpisz miejscowość...">
+            <button id="search-btn">Szukaj</button>
+        </div>
+
+        <div id="clock" class="clock">00:00:00</div>
+        <div id="day-of-week" style="color: #4ade80; font-size: 0.9rem; margin-bottom: 10px;">--</div>
+
+        <div id="weather-icon" style="font-size: 3em; margin: 10px 0;"></div>
+        
+        <div id="moon" class="moon-box">🌙 Faza księżyca...</div>
+        <div id="location" class="location">Widełka</div>
+        
+        <div id="temp" class="temp">--°C</div>
+        <div id="desc" class="desc">Ładowanie...</div>
+        
+        <div class="info-grid">
+            <div class="info-item">💨 <span id="wind">--</span> m/s</div>
+            <div class="info-item">💦 <span id="hum">--</span>%</div>
+            <div class="info-item">⏲️ <span id="press">--</span> hPa</div>
+            <div class="info-item">👁️ <span id="vis">--</span> km</div>
+        </div>
+        
+        <div id="swieto" class="cal"></div>
+        <div id="imieniny" class="imieniny"></div>
+
+        <div id="alert-box" style="margin-top: 15px; padding: 10px; border-radius: 8px; background: rgba(255, 107, 107, 0.2); color: #ff6b6b; font-weight: bold; display: none;">
+            ⚠️ <span id="alert-text"></span>
+        </div>
+
+        <div id="forecast-section" style="margin-top: 15px; border-top: 1px solid #444; padding-top: 10px;">
+            <div style="font-size: 0.9em; color: #aaa;">Jutro: <span id="tomorrow-temp">--</span>°C</div>
+            <div id="tomorrow-desc" style="font-size: 0.8em; color: #888;">Czekam na dane...</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
