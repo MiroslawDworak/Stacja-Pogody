@@ -109,7 +109,7 @@ def pobierz_prognoze_dane(miasto, api_key):
 
 def uruchom_stacje():
     miasto = "Widełka, PL"
-    api_key = "4ab2a1fe5c04c6ef99fb38d06e42779d"
+    api_key = "WPISZ_KLUCZ_API"
     
     baza_imienin = wczytaj_json('dane.json')
     baza_swiat = wczytaj_json('holidays.json')
