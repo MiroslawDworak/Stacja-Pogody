@@ -1,10 +1,10 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-02-01 14:08:54",
+  "timestamp": "2026-02-01 14:18:55",
   "main": {
     "temp": -9.18,
     "feels_like": -16.18,
-    "humidity": 62,
+    "humidity": 67,
     "pressure": 1019
   },
   "weather": [
@@ -28,6 +28,6 @@
   },
   "prognoza": {
     "temp": -10,
-    "opis": "zachmurzenie duże"
+    "opis": "zachmurzenie małe"
   }
 }
