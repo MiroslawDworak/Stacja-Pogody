@@ -1,6 +1,6 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-02-01 09:58:41",
+  "timestamp": "2026-02-01 10:08:41",
   "main": {
     "temp": -14.18,
     "feels_like": -21.18,
@@ -27,7 +27,7 @@
     "swieto": "Dzień powszedni"
   },
   "prognoza": {
-    "temp": -13,
+    "temp": -10,
     "opis": "zachmurzenie duże"
   }
 }
