@@ -1,13 +1,11 @@
 {
-  "name": "Widełka",
-  "timestamp": "2026-02-01 15:37:25",
   "main": {
-    "temp": -9.18,
-    "feels_like": -16.18,
-    "temp_min": -9.18,
-    "temp_max": -9.18,
+    "temp": -8.18,
+    "feels_like": -15.18,
+    "temp_min": -8.18,
+    "temp_max": -8.18,
     "pressure": 1019,
-    "humidity": 67,
+    "humidity": 62,
     "sea_level": 1019,
     "grnd_level": 991
   },
@@ -20,29 +18,18 @@
     }
   ],
   "wind": {
-    "speed": 6.69,
+    "speed": 7.2,
     "deg": 90
   },
-  "sys": {
-    "type": 1,
-    "id": 1711,
-    "country": "PL",
-    "sunrise": 1769926023,
-    "sunset": 1769959494
-  },
-  "visibility": 10000,
-  "moon": "Przybywający wypukły",
-  "kalendarz": {
-    "imieniny": "Brygidy, Ignacego",
-    "swieto": "Dzień powszedni"
-  },
-  "prognoza": {
-    "temp": -10,
-    "opis": "zachmurzenie małe"
-  },
+  "is_day": true,
+  "season": "zima",
+  "timestamp": "2026-02-01 16:00:51",
   "air_quality": {
     "aqi": 1,
     "opis": "Świetne",
-    "pm25": 5.49
+    "pm25": 5.52
+  },
+  "kalendarz": {
+    "imieniny": "Brygidy, Ignacego"
   }
 }
