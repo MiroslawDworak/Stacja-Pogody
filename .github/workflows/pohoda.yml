@@ -1,0 +1,34 @@
+name: Aktualizacja Pogody Widełka
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Uruchamiaj co 15 minut
+  workflow_dispatch: # Pozwala uruchomić ręcznie przyciskiem
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobranie kodu
+        uses: actions/checkout@v3
+
+      - name: Ustawienie Pythona
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalacja bibliotek
+        run: pip install requests GitPython
+
+      - name: Uruchomienie skryptu
+        env:
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+        run: python pogoda.py
+
+      - name: Wysłanie wyników na GitHub
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add wynik_pogoda.json historia.json
+          git commit -m "Automatyczna aktualizacja [GitHub Action]" || exit 0
+          git push

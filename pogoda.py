@@ -5,17 +5,29 @@ import json
 from datetime import datetime
 from git import Repo
 
-# --- KONFIGURACJA GITHUB ---
+# --- KONFIGURACJA ---
 PATH_OF_GIT_REPO = r'.' 
+
+# Pobieranie klucza z GitHub Secrets (jeśli skrypt działa na serwerze)
+# lub użycie Twojego klucza (jeśli skrypt działa u Ciebie w Widełce)
+api_key_env = os.getenv('OPENWEATHER_API_KEY')
+if api_key_env:
+    API_KEY = api_key_env
+else:
+    # Wpisz tutaj swój klucz do testów lokalnych
+    API_KEY = "4ab2a1fe5c04c6ef99fb38d06e42779d"
 
 def push_to_github():
     """Wysyła plik wynik_pogoda.json do repozytorium GitHub"""
     try:
         repo = Repo(PATH_OF_GIT_REPO)
+        # Dodajemy zabezpieczenie rebase, aby uniknąć błędów synchronizacji
+        origin = repo.remote(name='origin')
+        origin.pull(rebase=True)
+        
         repo.index.add(['wynik_pogoda.json'])
         now = datetime.now().strftime("%H:%M:%S")
         repo.index.commit(f"Aktualizacja pogody: {now}")
-        origin = repo.remote(name='origin')
         origin.push()
         return f"[{now}] ✅ Wysłano do sieci"
     except Exception as e:
@@ -45,8 +57,6 @@ def wczytaj_json(nazwa_pliku):
 
 def zapisz_wynik_pogody(dane_z_api, dane_prognozy, imieniny, swieto):
     """Zapisuje bieżące dane ORAZ prognozę do pliku wynik_pogoda.json"""
-    
-    # Wyciągamy dane na jutro (zazwyczaj indeks [8] w prognozie 3-godzinnej to +24h)
     temp_jutro = "brak"
     opis_jutro = "brak"
     if dane_prognozy and 'list' in dane_prognozy:
@@ -62,7 +72,7 @@ def zapisz_wynik_pogody(dane_z_api, dane_prognozy, imieniny, swieto):
             "humidity": dane_z_api['main']['humidity'],
             "pressure": dane_z_api['main']['pressure']
         },
-        "weather": [{"description": dane_z_api['weather'][0]['description']}],
+        "weather": [{"description": dane_z_api['weather'][0]['description'], "icon": dane_z_api['weather'][0]['icon']}],
         "wind": {
             "speed": dane_z_api['wind']['speed'],
             "gust": dane_z_api['wind'].get('gust', 0)
@@ -98,7 +108,6 @@ def pobierz_pogode_dane(miasto, api_key):
         return None
 
 def pobierz_prognoze_dane(miasto, api_key):
-    """NOWA FUNKCJA: Pobiera prognozę 5-dniową"""
     url = "http://api.openweathermap.org/data/2.5/forecast"
     params = {'q': miasto, 'appid': api_key, 'units': 'metric', 'lang': 'pl'}
     try:
@@ -109,27 +118,24 @@ def pobierz_prognoze_dane(miasto, api_key):
 
 def uruchom_stacje():
     miasto = "Widełka, PL"
-    api_key = "WPISZ_KLUCZ_API"
     
     baza_imienin = wczytaj_json('dane.json')
     baza_swiat = wczytaj_json('holidays.json')
     
+    # Ustawiamy na 0, żeby pobrało od razu po starcie
     ostatnia_aktualizacja_pogody = 0
     ostatnia_aktualizacja_sieci = 0
     dane_p = None
     dane_f = None
     status_sieci = "Oczekiwanie..."
 
-    os.system('clear')
-
     while True:
         teraz_ts = time.time()
         teraz_dt = datetime.now()
         
-        # Pobieranie pogody i PROGNOZY co 5 minut
         if teraz_ts - ostatnia_aktualizacja_pogody > 300:
-            dane_p = pobierz_pogode_dane(miasto, api_key)
-            dane_f = pobierz_prognoze_dane(miasto, api_key)
+            dane_p = pobierz_pogode_dane(miasto, API_KEY)
+            dane_f = pobierz_prognoze_dane(miasto, API_KEY)
             ostatnia_aktualizacja_pogody = teraz_ts
 
         klucz_imienin = teraz_dt.strftime('%m-%d')
@@ -140,11 +146,13 @@ def uruchom_stacje():
         if dane_p:
             zapisz_wynik_pogody(dane_p, dane_f, imieniny, swieto)
             
+            # WYSYŁKA CO 10 MINUT (600 sekund)
             if teraz_ts - ostatnia_aktualizacja_sieci > 600:
                 status_sieci = push_to_github()
                 ostatnia_aktualizacja_sieci = teraz_ts
 
-        print("\033[H", end="") 
+        # Czyszczenie ekranu (dla Linux/Windows)
+        os.system('cls' if os.name == 'nt' else 'clear')
 
         # PANEL INFORMACYJNY
         print("█" + "▀"*55 + "█")
@@ -154,7 +162,6 @@ def uruchom_stacje():
         print(f"  🎂 IMIENINY: {imieniny}".ljust(56))
         print(f"  🌙 KSIĘŻYC: {get_moon_phase()}".ljust(56))
         
-        # Wyświetlanie prognozy w konsoli (pod księżycem)
         if dane_f and 'list' in dane_f:
             t_j = round(dane_f['list'][8]['main']['temp'])
             o_j = dane_f['list'][8]['weather'][0]['description']
@@ -164,27 +171,9 @@ def uruchom_stacje():
 
         if dane_p:
             temp = dane_p['main']['temp']
-            odcuwalna = dane_p['main']['feels_like']
-            wilgotnosc = dane_p['main']['humidity']
-            cisnienie = dane_p['main']['pressure']
-            wiatr = dane_p['wind']['speed']
             opis = dane_p['weather'][0]['description']
-            widok = dane_p.get('visibility', 0) / 1000
-            
-            print(f"\n🌡️  POGODA: {temp}°C (Odczuwalna: {odcuwalna}°C)".ljust(57))
-            print(f"☁️  STAN: {opis.capitalize()} | 💦 Wilgotność: {wilgotnosc}%".ljust(57))
-            print(f"⏲️  CIŚNIENIE: {cisnienie} hPa | 💨 WIATR: {wiatr} m/s".ljust(57))
-            print(f"👁️  WIDOCZNOŚĆ: {widok} km".ljust(57))
-            
-            print("-" * 57)
-            alert_drogowy = "✅ WARUNKI DROGOWE: Stabilne"
-            if temp <= 2: alert_drogowy = "⚠️  ALERT: Ryzyko gołoledzi! Droga może być śliska."
-            if widok < 1: alert_drogowy = "🌫️  ALERT: Gęsta mgła! Zachowaj ostrożność."
-            if wiatr > 10: alert_drogowy = "🌬️  ALERT: Silny wiatr! Możliwe utrudnienia."
-            print(alert_drogowy.ljust(57))
-        
-        print("\n" + "." * 57)
-        print(f"Status: {status_sieci}".ljust(57))
+            print(f"\n🌡️  POGODA: {temp}°C | {opis.capitalize()}")
+            print(f"Status: {status_sieci}")
         
         time.sleep(1)
 
