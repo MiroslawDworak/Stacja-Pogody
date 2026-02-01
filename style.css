@@ -1,10 +1,49 @@
-body { transition: 2s; overflow: hidden; font-family: sans-serif; height: 100vh; margin: 0; }
-.zima { background: #1e3a8a; } .night { background: #020617; }
-.p { position: fixed; pointer-events: none; z-index: 1; }
-.snow::after { content: '❄'; color: white; }
-.rain::after { content: '💧'; color: #60a5fa; }
-.snow, .rain { top: -10%; animation: fall linear infinite; }
-.stars { width: 2px; height: 2px; background: white; animation: blink 2s infinite; }
-@keyframes fall { to { transform: translateY(110vh); } }
-@keyframes blink { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-#woj { position: fixed; bottom: 0; background: rgba(0,0,0,0.8); color: #4ade80; width: 100%; padding: 10px; white-space: nowrap; }
+body { 
+    background: #0f172a; 
+    color: white; 
+    font-family: 'Segoe UI', sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+.card { 
+    background: #1e293b; 
+    padding: 30px; 
+    border-radius: 30px; 
+    width: 90%; 
+    max-width: 360px; 
+    text-align: center; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.clock { font-size: 2.5rem; color: #4ade80; font-weight: bold; }
+.date-box { color: #94a3b8; font-size: 1rem; margin-bottom: 10px; }
+.weather-icon { font-size: 4.5rem; margin: 15px 0; }
+.location { font-size: 1.5rem; font-weight: bold; color: #f8fafc; }
+.temp { font-size: 5.5rem; font-weight: bold; color: #fbbf24; margin: 10px 0; }
+.desc { font-size: 1.3rem; text-transform: capitalize; color: #cbd5e1; margin-bottom: 20px; }
+
+.alert-box { 
+    background: #ef4444; color: white; padding: 10px; 
+    border-radius: 12px; margin-bottom: 20px; font-weight: bold;
+    animation: pulse 2s infinite; 
+}
+
+.info-grid { 
+    display: flex; flex-direction: column; gap: 8px;
+    background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px;
+    text-align: left; font-size: 1rem;
+}
+
+.air-card { background: rgba(0,0,0,0.3); border-radius: 20px; padding: 15px; margin-top: 15px; border-left: 5px solid #4ade80; }
+.air-label { font-size: 0.7rem; color: #888; text-transform: uppercase; }
+.air-val { font-size: 1.2rem; font-weight: bold; margin: 5px 0; }
+.air-pm { font-size: 0.8rem; color: #cbd5e1; }
+
+.imieniny { color: #4ade80; margin-top: 15px; font-size: 0.9rem; font-weight: 500; }
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }

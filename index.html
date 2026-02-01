@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stacja Widełka</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <div class="card">
-        <div id="clock" style="font-size: 2.5rem; color: #4ade80; font-weight: bold; min-height: 3rem;">00:00:00</div>
+    <div class="card" id="main-card">
+        <div id="clock" class="clock">00:00:00</div>
+        <div id="day-of-week" class="date-box">--</div>
+
+        <div id="weather-icon" class="weather-icon">☀️</div>
+        <div class="location">Widełka</div>
         
-        <div style="font-size: 5rem; font-weight: bold;"><span id="temp-akt">--</span>°C</div>
-        <div id="pogoda-opis" style="font-size: 1.2rem; margin-bottom: 20px;">Ładowanie...</div>
-        
-        <div style="text-align: left; font-size: 0.9rem; line-height: 1.8;">
-            <div id="sun">🌅 -- | 🌇 --</div>
-            <div id="wind">💨 Wiatr: --</div>
-            <div id="moon">🌙 Księżyc: --</div>
+        <div class="temp"><span id="temp-akt">--</span>°C</div>
+        <div id="pogoda-opis" class="desc">Ładowanie...</div>
+
+        <div id="weather-alert" class="alert-box" style="display: none;">
+            ⚠️ Uwaga: Ryzyko gołoledzi!
         </div>
+
+        <div class="info-grid">
+            <div id="sun-info">🌅 --:-- | 🌇 --:--</div>
+            <div id="wind-info">💨 -- m/s</div>
+            <div id="moon-info">🌙 --</div>
+        </div>
+
+        <div class="air-card">
+            <div class="air-label">Jakość powietrza</div>
+            <div id="air-status" class="air-val">--</div>
+            <div class="air-pm">PM2.5: <span id="pm25-val">--</span> µg/m³</div>
+        </div>
+
+        <div id="imieniny" class="imieniny"></div>
     </div>
-
-    <marquee id="woj" scrollamount="5" style="position: fixed; bottom: 0; background: rgba(0,0,0,0.8); color: #4ade80; width: 100%; padding: 10px;"></marquee>
-
     <script src="script.js"></script>
 </body>
 </html>
