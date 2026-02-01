@@ -1,7 +1,7 @@
 {
   "main": {
     "temp": -9.18,
-    "feels_like": -16.11,
+    "feels_like": -16.18,
     "temp_min": -9.18,
     "temp_max": -9.18,
     "pressure": 1019,
@@ -18,36 +18,30 @@
     }
   ],
   "wind": {
-    "speed": 4.63,
-    "deg": 60
+    "speed": 6.17,
+    "deg": 80
   },
   "sys": {
+    "type": 1,
+    "id": 1711,
+    "country": "PL",
     "sunrise": 1769926023,
     "sunset": 1769959494
   },
   "is_day": false,
   "moon": "Przybywający wypukły",
   "season": "zima",
-  "timestamp": "2026-02-01 16:30:29",
   "forecast": [
     {
-      "dt": "2026-02-01 18:00:00",
       "temp": -10,
       "desc": "zachmurzenie umiarkowane"
     },
     {
-      "dt": "2026-02-02 18:00:00",
       "temp": -12,
       "desc": "zachmurzenie umiarkowane"
     },
     {
-      "dt": "2026-02-03 18:00:00",
       "temp": -6,
-      "desc": "słabe opady śniegu"
-    },
-    {
-      "dt": "2026-02-04 18:00:00",
-      "temp": -1,
       "desc": "słabe opady śniegu"
     }
   ],
