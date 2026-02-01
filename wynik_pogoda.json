@@ -1,6 +1,6 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-02-01 10:08:41",
+  "timestamp": "2026-02-01 10:18:42",
   "main": {
     "temp": -14.18,
     "feels_like": -21.18,
@@ -13,7 +13,7 @@
     }
   ],
   "wind": {
-    "speed": 8.75,
+    "speed": 7.72,
     "gust": 0
   },
   "sys": {
