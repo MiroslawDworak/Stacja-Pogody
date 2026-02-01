@@ -1,22 +1,32 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-02-01 14:38:56",
+  "timestamp": "2026-02-01 15:28:11",
   "main": {
     "temp": -9.18,
     "feels_like": -16.18,
+    "temp_min": -9.18,
+    "temp_max": -9.18,
+    "pressure": 1018,
     "humidity": 67,
-    "pressure": 1019
+    "sea_level": 1018,
+    "grnd_level": 991
   },
   "weather": [
     {
-      "description": "zachmurzenie umiarkowane"
+      "id": 803,
+      "main": "Clouds",
+      "description": "zachmurzenie umiarkowane",
+      "icon": "04d"
     }
   ],
   "wind": {
-    "speed": 8.23,
-    "gust": 0
+    "speed": 6.69,
+    "deg": 90
   },
   "sys": {
+    "type": 1,
+    "id": 1711,
+    "country": "PL",
     "sunrise": 1769926023,
     "sunset": 1769959494
   },
@@ -29,5 +39,10 @@
   "prognoza": {
     "temp": -10,
     "opis": "zachmurzenie małe"
+  },
+  "air_quality": {
+    "aqi": 1,
+    "opis": "Świetne",
+    "pm25": 5.49
   }
 }
