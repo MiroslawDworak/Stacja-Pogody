@@ -1,9 +1,9 @@
 {
   "main": {
-    "temp": -8.18,
-    "feels_like": -15.18,
-    "temp_min": -8.18,
-    "temp_max": -8.18,
+    "temp": -9.18,
+    "feels_like": -16.11,
+    "temp_min": -9.18,
+    "temp_max": -9.18,
     "pressure": 1019,
     "humidity": 62,
     "sea_level": 1019,
@@ -14,22 +14,115 @@
       "id": 803,
       "main": "Clouds",
       "description": "zachmurzenie umiarkowane",
-      "icon": "04d"
+      "icon": "04n"
     }
   ],
   "wind": {
-    "speed": 7.2,
-    "deg": 90
+    "speed": 4.63,
+    "deg": 60
   },
-  "is_day": true,
+  "sys": {
+    "sunrise": 1769926023,
+    "sunset": 1769959494
+  },
+  "is_day": false,
+  "moon": "Przybywający wypukły",
   "season": "zima",
-  "timestamp": "2026-02-01 16:00:51",
-  "air_quality": {
-    "aqi": 1,
-    "opis": "Świetne",
-    "pm25": 5.52
-  },
-  "kalendarz": {
-    "imieniny": "Brygidy, Ignacego"
-  }
+  "timestamp": "2026-02-01 16:30:29",
+  "forecast": [
+    {
+      "dt": "2026-02-01 18:00:00",
+      "temp": -10,
+      "desc": "zachmurzenie umiarkowane"
+    },
+    {
+      "dt": "2026-02-02 18:00:00",
+      "temp": -12,
+      "desc": "zachmurzenie umiarkowane"
+    },
+    {
+      "dt": "2026-02-03 18:00:00",
+      "temp": -6,
+      "desc": "słabe opady śniegu"
+    },
+    {
+      "dt": "2026-02-04 18:00:00",
+      "temp": -1,
+      "desc": "słabe opady śniegu"
+    }
+  ],
+  "wojewodztwa": [
+    {
+      "city": "Białystok",
+      "temp": -14
+    },
+    {
+      "city": "Bydgoszcz",
+      "temp": -10
+    },
+    {
+      "city": "Gdańsk",
+      "temp": -10
+    },
+    {
+      "city": "Gorzów Wielkopolski",
+      "temp": -7
+    },
+    {
+      "city": "Katowice",
+      "temp": -10
+    },
+    {
+      "city": "Kielce",
+      "temp": -10
+    },
+    {
+      "city": "Kraków",
+      "temp": -9
+    },
+    {
+      "city": "Lublin",
+      "temp": -12
+    },
+    {
+      "city": "Łódź",
+      "temp": -11
+    },
+    {
+      "city": "Olsztyn",
+      "temp": -13
+    },
+    {
+      "city": "Opole",
+      "temp": -7
+    },
+    {
+      "city": "Poznań",
+      "temp": -7
+    },
+    {
+      "city": "Rzeszów",
+      "temp": -9
+    },
+    {
+      "city": "Szczecin",
+      "temp": -8
+    },
+    {
+      "city": "Toruń",
+      "temp": -12
+    },
+    {
+      "city": "Warszawa",
+      "temp": -11
+    },
+    {
+      "city": "Wrocław",
+      "temp": -7
+    },
+    {
+      "city": "Zielona Góra",
+      "temp": -6
+    }
+  ]
 }
