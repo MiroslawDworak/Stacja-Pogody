@@ -1,54 +1,59 @@
-function createWeatherParticles(type) {
-    const existing = document.querySelectorAll('.particle');
-    existing.forEach(p => p.remove());
+// Funkcja obsługująca zegar
+function updateClock() {
+    const teraz = new Date();
+    const elementZegara = document.getElementById('clock');
     
-    const count = type === 'stars' ? 40 : 60;
-    for (let i = 0; i < count; i++) {
-        let p = document.createElement('div');
-        p.className = 'particle ' + type;
-        p.style.left = Math.random() * 100 + 'vw';
-        if (type === 'stars') {
-            p.style.top = Math.random() * 100 + 'vh';
-            p.style.animationDelay = Math.random() * 2 + 's';
-        } else {
-            p.style.animationDuration = (Math.random() * 2 + 1) + 's';
-            p.style.animationDelay = Math.random() * 2 + 's';
-        }
-        document.body.appendChild(p);
+    if (elementZegara) {
+        elementZegara.innerText = teraz.toLocaleTimeString('pl-PL', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
     }
 }
 
+// Funkcja pobierająca dane pogodowe
 async function updateWeather() {
     try {
-        const response = await fetch('wynik_pogoda.json?t=' + new Date().getTime());
-        const data = await response.json();
+        const response = await fetch('wynik_pogoda.json?t=' + Date.now());
+        const d = await response.json();
         
-        const desc = data.weather[0].description.toLowerCase();
-        const isDay = data.is_day;
-
-        // Tła i Animacje
-        document.body.className = isDay ? data.season + '-bg' : 'night-bg';
-        if (!isDay) createWeatherParticles('stars');
-        else if (desc.includes('śnieg')) createWeatherParticles('snow');
-        else if (desc.includes('deszcz')) createWeatherParticles('rain');
-
-        // Dane główne
-        document.getElementById('temp-akt').innerText = Math.round(data.main.temp);
+        const desc = d.weather[0].description.toLowerCase();
+        
+        // Dane tekstowe
+        document.getElementById('temp-akt').innerText = Math.round(d.main.temp);
         document.getElementById('pogoda-opis').innerText = desc;
-        document.getElementById('wind-speed').innerText = data.wind.speed + " m/s";
-        document.getElementById('sun-times').innerText = `🌅 ${new Date(data.sys.sunrise*1000).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})} | 🌇 ${new Date(data.sys.sunset*1000).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
-        document.getElementById('moon-phase').innerText = data.moon;
+        
+        // Dane dodatkowe (Słońce, Wiatr, Księżyc)
+        if(document.getElementById('sun')) {
+            document.getElementById('sun').innerText = `🌅 ${new Date(d.sys.sunrise*1000).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})} | 🌇 ${new Date(d.sys.sunset*1000).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
+        }
+        if(document.getElementById('wind')) {
+            document.getElementById('wind').innerText = `💨 Wiatr: ${d.wind.speed} m/s`;
+        }
+        if(document.getElementById('moon')) {
+            document.getElementById('moon').innerText = `🌙 ${d.moon}`;
+        }
 
-        // Miasta wojewódzkie
-        const list = document.getElementById('woj-list');
-        list.innerHTML = data.wojewodztwa.map(m => `<span>${m.city}: <b>${m.temp}°C</b></span>`).join(' • ');
+        // Pasek miast wojewódzkich
+        const woj = document.getElementById('woj');
+        if (woj && d.wojewodztwa) {
+            woj.innerHTML = d.wojewodztwa.map(m => ` ${m.city}: ${m.temp}°C `).join(' • ');
+        }
 
-        // Prognoza
-        const forecast = document.getElementById('forecast-box');
-        forecast.innerHTML = data.forecast.map(f => `<div>${f.dt.split(' ')[0].slice(5)} | ${f.temp}°C | ${f.desc}</div>`).join('');
+        // Zmiana tła strony (Dzień/Noc)
+        document.body.className = d.is_day ? (d.season || 'lato') : 'night';
 
-    } catch (e) { console.log("Ładowanie..."); }
+    } catch (e) {
+        console.error("Błąd aktualizacji pogody:", e);
+    }
 }
 
+// URUCHOMIENIE
+// 1. Zegar co 1 sekundę
+setInterval(updateClock, 1000);
+updateClock(); // Pierwsze wywołanie od razu
+
+// 2. Pogoda co 5 minut
 setInterval(updateWeather, 300000);
-updateWeather();
+updateWeather(); // Pierwsze wywołanie od razu

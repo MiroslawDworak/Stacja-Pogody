@@ -18,8 +18,7 @@ MIASTA_WOJ = [
 
 def get_moon_phase():
     diff = datetime.now() - datetime(2000, 1, 6, 18, 14)
-    days = diff.total_seconds() / 86400
-    lunation = (days % 29.53) / 29.53
+    lunation = (diff.total_seconds() / 86400 % 29.53) / 29.53
     if lunation < 0.06 or lunation > 0.94: return "Nów"
     if lunation < 0.25: return "Przybywający sierpień"
     if lunation < 0.35: return "Pierwsza kwadra"
@@ -34,12 +33,13 @@ def get_season():
     if m in [6, 7, 8]: return "lato"
     return "jesien"
 
-def pobierz_pogode_i_smog():
-    miasto = "Widełka, PL"
+def pobierz_dane():
     try:
-        p = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={miasto}&appid={API_KEY}&units=metric&lang=pl").json()
-        f = requests.get(f"http://api.openweathermap.org/data/2.5/forecast?q={miasto}&appid={API_KEY}&units=metric&lang=pl").json()
+        # Główna pogoda (Widełka)
+        p = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q=Widełka,PL&appid={API_KEY}&units=metric&lang=pl").json()
+        f = requests.get(f"http://api.openweathermap.org/data/2.5/forecast?q=Widełka,PL&appid={API_KEY}&units=metric&lang=pl").json()
         
+        # Miasta wojewódzkie
         woj_pogoda = []
         for m in MIASTA_WOJ:
             res = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={m},PL&appid={API_KEY}&units=metric").json()
@@ -48,39 +48,26 @@ def pobierz_pogode_i_smog():
         return p, f, woj_pogoda
     except: return None, None, None
 
-def zapisz_json(p, f, woj):
-    now = datetime.now()
-    sunrise = p['sys'].get('sunrise', 0)
-    sunset = p['sys'].get('sunset', 0)
-    
-    wynik = {
-        "main": p['main'],
-        "weather": p['weather'],
-        "wind": p['wind'],
-        "sys": {"sunrise": sunrise, "sunset": sunset},
-        "is_day": sunrise < now.timestamp() < sunset,
-        "moon": get_moon_phase(),
-        "season": get_season(),
-        "timestamp": now.strftime('%Y-%m-%d %H:%M:%S'),
-        "forecast": [{"dt": i['dt_txt'], "temp": round(i['main']['temp']), "desc": i['weather'][0]['description']} for i in f['list'][::8][:4]] if f else [],
-        "wojewodztwa": woj
-    }
-    with open('wynik_pogoda.json', 'w', encoding='utf-8') as file:
-        json.dump(wynik, file, indent=2, ensure_ascii=False)
-
 def push_to_github():
     try:
         repo = Repo(PATH_OF_GIT_REPO)
         repo.index.add(['wynik_pogoda.json'])
         repo.index.commit(f"Meteo Update: {datetime.now().strftime('%H:%M')}")
-        repo.remote().pull(rebase=True)
         repo.remote().push()
-        return "✅ OK"
-    except: return "❌ Błąd Git"
+        return "✅ Dane wysłane na stronę"
+    except Exception as e: return f"❌ Git: {e}"
 
 while True:
-    p, f, woj = pobierz_pogode_i_smog()
+    p, f, woj = pobierz_dane()
     if p:
-        zapisz_json(p, f, woj)
+        wynik = {
+            "main": p['main'], "weather": p['weather'], "wind": p['wind'],
+            "sys": p['sys'], "is_day": p['sys']['sunrise'] < time.time() < p['sys']['sunset'],
+            "moon": get_moon_phase(), "season": get_season(),
+            "forecast": [{"temp": round(i['main']['temp']), "desc": i['weather'][0]['description']} for i in f['list'][::8][:3]],
+            "wojewodztwa": woj
+        }
+        with open('wynik_pogoda.json', 'w', encoding='utf-8') as file:
+            json.dump(wynik, file, indent=2, ensure_ascii=False)
         print(push_to_github())
     time.sleep(600)
