@@ -1,14 +1,14 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-02-01 15:28:11",
+  "timestamp": "2026-02-01 15:32:59",
   "main": {
     "temp": -9.18,
     "feels_like": -16.18,
     "temp_min": -9.18,
     "temp_max": -9.18,
-    "pressure": 1018,
+    "pressure": 1019,
     "humidity": 67,
-    "sea_level": 1018,
+    "sea_level": 1019,
     "grnd_level": 991
   },
   "weather": [
