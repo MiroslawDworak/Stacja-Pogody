@@ -1,29 +1,33 @@
 {
   "name": "Widełka",
-  "timestamp": "2026-01-31 20:17:13",
+  "timestamp": "2026-02-01 09:28:41",
   "main": {
-    "temp": -11.18,
-    "feels_like": -18.18,
-    "humidity": 79,
-    "pressure": 1018
+    "temp": -15.18,
+    "feels_like": -22.18,
+    "humidity": 78,
+    "pressure": 1020
   },
   "weather": [
     {
-      "description": "zachmurzenie umiarkowane"
+      "description": "bezchmurnie"
     }
   ],
   "wind": {
-    "speed": 7.2,
+    "speed": 8.23,
     "gust": 0
   },
   "sys": {
-    "sunrise": 1769839708,
-    "sunset": 1769872990
+    "sunrise": 1769926023,
+    "sunset": 1769959494
   },
   "visibility": 10000,
   "moon": "Przybywający wypukły",
   "kalendarz": {
-    "imieniny": "Jana, Marceli",
+    "imieniny": "Brygidy, Ignacego",
     "swieto": "Dzień powszedni"
+  },
+  "prognoza": {
+    "temp": -13,
+    "opis": "zachmurzenie duże"
   }
 }
