@@ -1,25 +1,25 @@
 {
   "main": {
-    "temp": -9.18,
-    "feels_like": -16.18,
-    "temp_min": -9.18,
-    "temp_max": -9.18,
-    "pressure": 1020,
+    "temp": -10.18,
+    "feels_like": -17.18,
+    "temp_min": -10.18,
+    "temp_max": -10.18,
+    "pressure": 1019,
     "humidity": 62,
-    "sea_level": 1020,
+    "sea_level": 1019,
     "grnd_level": 991
   },
   "weather": [
     {
-      "id": 803,
+      "id": 802,
       "main": "Clouds",
-      "description": "zachmurzenie umiarkowane",
-      "icon": "04n"
+      "description": "zachmurzenie małe",
+      "icon": "03n"
     }
   ],
   "wind": {
-    "speed": 6.17,
-    "deg": 80
+    "speed": 5.14,
+    "deg": 70
   },
   "sys": {
     "type": 1,
@@ -31,24 +31,10 @@
   "is_day": false,
   "moon": "Przybywający wypukły",
   "season": "zima",
-  "forecast": [
-    {
-      "temp": -10,
-      "desc": "zachmurzenie umiarkowane"
-    },
-    {
-      "temp": -12,
-      "desc": "zachmurzenie umiarkowane"
-    },
-    {
-      "temp": -6,
-      "desc": "słabe opady śniegu"
-    }
-  ],
-  "wojewodztwa": [
+  "woj": [
     {
       "city": "Białystok",
-      "temp": -14
+      "temp": -17
     },
     {
       "city": "Bydgoszcz",
@@ -56,11 +42,7 @@
     },
     {
       "city": "Gdańsk",
-      "temp": -10
-    },
-    {
-      "city": "Gorzów Wielkopolski",
-      "temp": -8
+      "temp": -12
     },
     {
       "city": "Katowice",
@@ -68,7 +50,7 @@
     },
     {
       "city": "Kielce",
-      "temp": -11
+      "temp": -12
     },
     {
       "city": "Kraków",
@@ -96,7 +78,7 @@
     },
     {
       "city": "Rzeszów",
-      "temp": -9
+      "temp": -10
     },
     {
       "city": "Szczecin",
