@@ -4,9 +4,9 @@
     "feels_like": -16.11,
     "temp_min": -9.18,
     "temp_max": -9.18,
-    "pressure": 1018,
+    "pressure": 1017,
     "humidity": 53,
-    "sea_level": 1018,
+    "sea_level": 1017,
     "grnd_level": 989
   },
   "weather": [
@@ -42,7 +42,7 @@
     },
     {
       "city": "Gdańsk",
-      "temp": -12
+      "temp": -13
     },
     {
       "city": "Katowice",
@@ -50,7 +50,7 @@
     },
     {
       "city": "Kielce",
-      "temp": -11
+      "temp": -12
     },
     {
       "city": "Kraków",
@@ -86,7 +86,7 @@
     },
     {
       "city": "Toruń",
-      "temp": -13
+      "temp": -14
     },
     {
       "city": "Warszawa",
@@ -94,7 +94,7 @@
     },
     {
       "city": "Wrocław",
-      "temp": -6
+      "temp": -5
     },
     {
       "city": "Zielona Góra",
