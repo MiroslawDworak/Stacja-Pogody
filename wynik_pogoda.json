@@ -4,9 +4,9 @@
     "feels_like": -15.18,
     "temp_min": -8.18,
     "temp_max": -8.18,
-    "pressure": 1017,
+    "pressure": 1018,
     "humidity": 49,
-    "sea_level": 1017,
+    "sea_level": 1018,
     "grnd_level": 989
   },
   "weather": [
@@ -14,7 +14,7 @@
       "id": 803,
       "main": "Clouds",
       "description": "zachmurzenie umiarkowane",
-      "icon": "04d"
+      "icon": "04n"
     }
   ],
   "wind": {
@@ -28,13 +28,13 @@
     "sunrise": 1770012336,
     "sunset": 1770045998
   },
-  "is_day": true,
+  "is_day": false,
   "moon": "Pełnia",
   "season": "zima",
   "woj": [
     {
       "city": "Białystok",
-      "temp": -13
+      "temp": -12
     },
     {
       "city": "Bydgoszcz",
@@ -86,7 +86,7 @@
     },
     {
       "city": "Toruń",
-      "temp": -11
+      "temp": -13
     },
     {
       "city": "Warszawa",
