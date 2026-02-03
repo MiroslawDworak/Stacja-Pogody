@@ -4,9 +4,9 @@
     "feels_like": -13.18,
     "temp_min": -6.18,
     "temp_max": -6.18,
-    "pressure": 1017,
+    "pressure": 1016,
     "humidity": 79,
-    "sea_level": 1017,
+    "sea_level": 1016,
     "grnd_level": 988
   },
   "weather": [
@@ -86,7 +86,7 @@
     },
     {
       "city": "Toruń",
-      "temp": -12
+      "temp": -13
     },
     {
       "city": "Warszawa",
