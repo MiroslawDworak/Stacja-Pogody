@@ -18,7 +18,7 @@
     }
   ],
   "wind": {
-    "speed": 6.69,
+    "speed": 7.72,
     "deg": 90
   },
   "sys": {
@@ -34,7 +34,7 @@
   "woj": [
     {
       "city": "Białystok",
-      "temp": -10
+      "temp": -11
     },
     {
       "city": "Bydgoszcz",
@@ -42,7 +42,7 @@
     },
     {
       "city": "Gdańsk",
-      "temp": -9
+      "temp": -10
     },
     {
       "city": "Katowice",
@@ -50,7 +50,7 @@
     },
     {
       "city": "Kielce",
-      "temp": -8
+      "temp": -9
     },
     {
       "city": "Kraków",
