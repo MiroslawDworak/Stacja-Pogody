@@ -1,11 +1,11 @@
 {
   "main": {
-    "temp": -6.18,
-    "feels_like": -13.18,
-    "temp_min": -6.18,
-    "temp_max": -6.18,
+    "temp": -5.18,
+    "feels_like": -12.18,
+    "temp_min": -5.18,
+    "temp_max": -5.18,
     "pressure": 1016,
-    "humidity": 79,
+    "humidity": 74,
     "sea_level": 1016,
     "grnd_level": 988
   },
@@ -38,7 +38,7 @@
     },
     {
       "city": "Bydgoszcz",
-      "temp": -10
+      "temp": -11
     },
     {
       "city": "Gdańsk",
@@ -66,7 +66,7 @@
     },
     {
       "city": "Olsztyn",
-      "temp": -12
+      "temp": -13
     },
     {
       "city": "Opole",
@@ -78,7 +78,7 @@
     },
     {
       "city": "Rzeszów",
-      "temp": -6
+      "temp": -5
     },
     {
       "city": "Szczecin",
