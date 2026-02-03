@@ -11,9 +11,9 @@
   },
   "weather": [
     {
-      "id": 803,
+      "id": 804,
       "main": "Clouds",
-      "description": "zachmurzenie umiarkowane",
+      "description": "zachmurzenie duże",
       "icon": "04n"
     }
   ],
@@ -86,11 +86,11 @@
     },
     {
       "city": "Toruń",
-      "temp": -12
+      "temp": -13
     },
     {
       "city": "Warszawa",
-      "temp": -11
+      "temp": -10
     },
     {
       "city": "Wrocław",
@@ -98,7 +98,7 @@
     },
     {
       "city": "Zielona Góra",
-      "temp": -4
+      "temp": -5
     }
   ]
 }
