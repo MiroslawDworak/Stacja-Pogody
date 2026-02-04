@@ -1,7 +1,7 @@
 {
   "main": {
     "temp": -2.18,
-    "feels_like": -8.31,
+    "feels_like": -8.03,
     "temp_min": -2.18,
     "temp_max": -2.18,
     "pressure": 1009,
@@ -18,7 +18,7 @@
     }
   ],
   "wind": {
-    "speed": 6.17,
+    "speed": 5.66,
     "deg": 80
   },
   "sys": {
@@ -54,7 +54,7 @@
     },
     {
       "city": "Kraków",
-      "temp": -1
+      "temp": -2
     },
     {
       "city": "Lublin",
