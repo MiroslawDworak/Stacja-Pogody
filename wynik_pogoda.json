@@ -5,7 +5,7 @@
     "temp_min": -2.18,
     "temp_max": -2.18,
     "pressure": 1009,
-    "humidity": 86,
+    "humidity": 93,
     "sea_level": 1009,
     "grnd_level": 981
   },
@@ -42,7 +42,7 @@
     },
     {
       "city": "Gdańsk",
-      "temp": -7
+      "temp": -8
     },
     {
       "city": "Katowice",
@@ -74,7 +74,7 @@
     },
     {
       "city": "Poznań",
-      "temp": -6
+      "temp": -7
     },
     {
       "city": "Rzeszów",
