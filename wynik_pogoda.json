@@ -1,13 +1,13 @@
 {
   "main": {
-    "temp": -6.18,
-    "feels_like": -13.18,
-    "temp_min": -6.18,
-    "temp_max": -6.18,
-    "pressure": 1017,
-    "humidity": 79,
-    "sea_level": 1017,
-    "grnd_level": 988
+    "temp": -2.18,
+    "feels_like": -8.31,
+    "temp_min": -2.18,
+    "temp_max": -2.18,
+    "pressure": 1009,
+    "humidity": 86,
+    "sea_level": 1009,
+    "grnd_level": 981
   },
   "weather": [
     {
@@ -18,87 +18,87 @@
     }
   ],
   "wind": {
-    "speed": 7.72,
-    "deg": 90
+    "speed": 6.17,
+    "deg": 80
   },
   "sys": {
     "type": 1,
     "id": 1711,
     "country": "PL",
-    "sunrise": 1770098648,
-    "sunset": 1770132502
+    "sunrise": 1770184957,
+    "sunset": 1770219007
   },
   "is_day": false,
-  "moon": "Pełnia",
+  "moon": "Ubywający",
   "season": "zima",
   "woj": [
     {
       "city": "Białystok",
-      "temp": -14
-    },
-    {
-      "city": "Bydgoszcz",
-      "temp": -11
-    },
-    {
-      "city": "Gdańsk",
-      "temp": -11
-    },
-    {
-      "city": "Katowice",
-      "temp": -4
-    },
-    {
-      "city": "Kielce",
-      "temp": -9
-    },
-    {
-      "city": "Kraków",
-      "temp": -5
-    },
-    {
-      "city": "Lublin",
-      "temp": -11
-    },
-    {
-      "city": "Łódź",
-      "temp": -9
-    },
-    {
-      "city": "Olsztyn",
-      "temp": -13
-    },
-    {
-      "city": "Opole",
-      "temp": -4
-    },
-    {
-      "city": "Poznań",
       "temp": -8
     },
     {
-      "city": "Rzeszów",
-      "temp": -6
+      "city": "Bydgoszcz",
+      "temp": -8
     },
     {
-      "city": "Szczecin",
+      "city": "Gdańsk",
       "temp": -7
     },
     {
+      "city": "Katowice",
+      "temp": 1
+    },
+    {
+      "city": "Kielce",
+      "temp": -4
+    },
+    {
+      "city": "Kraków",
+      "temp": -1
+    },
+    {
+      "city": "Lublin",
+      "temp": -4
+    },
+    {
+      "city": "Łódź",
+      "temp": -6
+    },
+    {
+      "city": "Olsztyn",
+      "temp": -8
+    },
+    {
+      "city": "Opole",
+      "temp": 2
+    },
+    {
+      "city": "Poznań",
+      "temp": -6
+    },
+    {
+      "city": "Rzeszów",
+      "temp": -2
+    },
+    {
+      "city": "Szczecin",
+      "temp": -5
+    },
+    {
       "city": "Toruń",
-      "temp": -13
+      "temp": -9
     },
     {
       "city": "Warszawa",
-      "temp": -10
+      "temp": -7
     },
     {
       "city": "Wrocław",
-      "temp": -3
+      "temp": -1
     },
     {
       "city": "Zielona Góra",
-      "temp": -5
+      "temp": -6
     }
   ]
 }
