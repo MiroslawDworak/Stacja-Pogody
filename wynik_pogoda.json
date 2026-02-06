@@ -1,11 +1,11 @@
 {
   "main": {
-    "temp": 0.82,
-    "feels_like": -3.97,
-    "temp_min": 0.82,
-    "temp_max": 0.82,
+    "temp": 1.82,
+    "feels_like": -2.72,
+    "temp_min": 1.82,
+    "temp_max": 1.82,
     "pressure": 998,
-    "humidity": 100,
+    "humidity": 93,
     "sea_level": 998,
     "grnd_level": 971
   },
@@ -19,7 +19,7 @@
   ],
   "wind": {
     "speed": 5.14,
-    "deg": 90
+    "deg": 80
   },
   "sys": {
     "type": 1,
@@ -54,7 +54,7 @@
     },
     {
       "city": "Kraków",
-      "temp": 1
+      "temp": 2
     },
     {
       "city": "Lublin",
@@ -62,7 +62,7 @@
     },
     {
       "city": "Łódź",
-      "temp": 1
+      "temp": 2
     },
     {
       "city": "Olsztyn",
@@ -78,11 +78,11 @@
     },
     {
       "city": "Rzeszów",
-      "temp": 1
+      "temp": 2
     },
     {
       "city": "Szczecin",
-      "temp": 0
+      "temp": 1
     },
     {
       "city": "Toruń",
