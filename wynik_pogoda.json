@@ -1,11 +1,11 @@
 {
   "main": {
-    "temp": 1.82,
-    "feels_like": -2.43,
-    "temp_min": 1.82,
-    "temp_max": 1.82,
+    "temp": 0.82,
+    "feels_like": -3.36,
+    "temp_min": 0.82,
+    "temp_max": 0.82,
     "pressure": 998,
-    "humidity": 93,
+    "humidity": 100,
     "sea_level": 998,
     "grnd_level": 971
   },
@@ -18,7 +18,7 @@
     }
   ],
   "wind": {
-    "speed": 4.63,
+    "speed": 4.12,
     "deg": 80
   },
   "sys": {
@@ -54,7 +54,7 @@
     },
     {
       "city": "Kraków",
-      "temp": 2
+      "temp": 3
     },
     {
       "city": "Lublin",
@@ -78,7 +78,7 @@
     },
     {
       "city": "Rzeszów",
-      "temp": 2
+      "temp": 1
     },
     {
       "city": "Szczecin",
@@ -94,7 +94,7 @@
     },
     {
       "city": "Wrocław",
-      "temp": 2
+      "temp": 3
     },
     {
       "city": "Zielona Góra",
