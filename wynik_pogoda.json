@@ -46,7 +46,7 @@
     },
     {
       "city": "Katowice",
-      "temp": 5
+      "temp": 4
     },
     {
       "city": "Kielce",
@@ -86,11 +86,11 @@
     },
     {
       "city": "Toruń",
-      "temp": -1
+      "temp": -2
     },
     {
       "city": "Warszawa",
-      "temp": 2
+      "temp": 1
     },
     {
       "city": "Wrocław",
