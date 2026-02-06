@@ -11,10 +11,10 @@
   },
   "weather": [
     {
-      "id": 802,
+      "id": 804,
       "main": "Clouds",
-      "description": "zachmurzenie małe",
-      "icon": "03n"
+      "description": "zachmurzenie duże",
+      "icon": "04n"
     }
   ],
   "wind": {
@@ -94,7 +94,7 @@
     },
     {
       "city": "Wrocław",
-      "temp": 3
+      "temp": 2
     },
     {
       "city": "Zielona Góra",
