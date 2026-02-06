@@ -1,7 +1,7 @@
 {
   "main": {
     "temp": 1.82,
-    "feels_like": -2.72,
+    "feels_like": -2.43,
     "temp_min": 1.82,
     "temp_max": 1.82,
     "pressure": 998,
@@ -11,14 +11,14 @@
   },
   "weather": [
     {
-      "id": 803,
+      "id": 802,
       "main": "Clouds",
-      "description": "zachmurzenie umiarkowane",
-      "icon": "04d"
+      "description": "zachmurzenie małe",
+      "icon": "03n"
     }
   ],
   "wind": {
-    "speed": 5.14,
+    "speed": 4.63,
     "deg": 80
   },
   "sys": {
@@ -28,21 +28,21 @@
     "sunrise": 1770357570,
     "sunset": 1770392016
   },
-  "is_day": true,
+  "is_day": false,
   "moon": "Ubywający",
   "season": "zima",
   "woj": [
     {
       "city": "Białystok",
-      "temp": -2
+      "temp": -1
     },
     {
       "city": "Bydgoszcz",
-      "temp": -1
+      "temp": 0
     },
     {
       "city": "Gdańsk",
-      "temp": -1
+      "temp": 0
     },
     {
       "city": "Katowice",
@@ -54,15 +54,15 @@
     },
     {
       "city": "Kraków",
-      "temp": 2
+      "temp": 3
     },
     {
       "city": "Lublin",
-      "temp": 2
+      "temp": 0
     },
     {
       "city": "Łódź",
-      "temp": 2
+      "temp": 1
     },
     {
       "city": "Olsztyn",
@@ -70,7 +70,7 @@
     },
     {
       "city": "Opole",
-      "temp": 3
+      "temp": 5
     },
     {
       "city": "Poznań",
@@ -98,7 +98,7 @@
     },
     {
       "city": "Zielona Góra",
-      "temp": 2
+      "temp": 1
     }
   ]
 }
