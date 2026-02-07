@@ -1,32 +1,38 @@
 {
   "main": {
     "temp": 0.82,
-    "feels_like": -3.36,
+    "feels_like": -1.57,
     "temp_min": 0.82,
     "temp_max": 0.82,
-    "pressure": 998,
+    "pressure": 1007,
     "humidity": 100,
-    "sea_level": 998,
-    "grnd_level": 971
+    "sea_level": 1007,
+    "grnd_level": 980
   },
   "weather": [
     {
-      "id": 804,
-      "main": "Clouds",
-      "description": "zachmurzenie duże",
-      "icon": "04n"
+      "id": 300,
+      "main": "Drizzle",
+      "description": "słaba mżawka",
+      "icon": "09n"
+    },
+    {
+      "id": 741,
+      "main": "Fog",
+      "description": "mgła",
+      "icon": "50n"
     }
   ],
   "wind": {
-    "speed": 4.12,
-    "deg": 80
+    "speed": 2.06,
+    "deg": 250
   },
   "sys": {
     "type": 1,
     "id": 1711,
     "country": "PL",
-    "sunrise": 1770357570,
-    "sunset": 1770392016
+    "sunrise": 1770443874,
+    "sunset": 1770478521
   },
   "is_day": false,
   "moon": "Ubywający",
@@ -34,19 +40,19 @@
   "woj": [
     {
       "city": "Białystok",
-      "temp": -1
+      "temp": -3
     },
     {
       "city": "Bydgoszcz",
-      "temp": 0
+      "temp": -2
     },
     {
       "city": "Gdańsk",
-      "temp": 0
+      "temp": -2
     },
     {
       "city": "Katowice",
-      "temp": 4
+      "temp": 2
     },
     {
       "city": "Kielce",
@@ -58,23 +64,23 @@
     },
     {
       "city": "Lublin",
-      "temp": 0
-    },
-    {
-      "city": "Łódź",
-      "temp": 1
-    },
-    {
-      "city": "Olsztyn",
       "temp": -1
     },
     {
+      "city": "Łódź",
+      "temp": 0
+    },
+    {
+      "city": "Olsztyn",
+      "temp": -2
+    },
+    {
       "city": "Opole",
-      "temp": 4
+      "temp": 1
     },
     {
       "city": "Poznań",
-      "temp": 1
+      "temp": 0
     },
     {
       "city": "Rzeszów",
@@ -82,7 +88,7 @@
     },
     {
       "city": "Szczecin",
-      "temp": 1
+      "temp": 0
     },
     {
       "city": "Toruń",
@@ -90,11 +96,11 @@
     },
     {
       "city": "Warszawa",
-      "temp": 1
+      "temp": 0
     },
     {
       "city": "Wrocław",
-      "temp": 3
+      "temp": 2
     },
     {
       "city": "Zielona Góra",
