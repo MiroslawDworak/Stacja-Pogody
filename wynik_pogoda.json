@@ -1,9 +1,9 @@
 {
   "main": {
-    "temp": -1.18,
-    "feels_like": -5,
-    "temp_min": -1.18,
-    "temp_max": -1.18,
+    "temp": -0.18,
+    "feels_like": -3.31,
+    "temp_min": -0.18,
+    "temp_max": -0.18,
     "pressure": 1010,
     "humidity": 100,
     "sea_level": 1010,
@@ -18,8 +18,8 @@
     }
   ],
   "wind": {
-    "speed": 3.09,
-    "deg": 70
+    "speed": 2.57,
+    "deg": 60
   },
   "sys": {
     "type": 1,
@@ -78,7 +78,7 @@
     },
     {
       "city": "Rzeszów",
-      "temp": -1
+      "temp": 0
     },
     {
       "city": "Szczecin",
