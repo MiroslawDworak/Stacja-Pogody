@@ -62,7 +62,7 @@
     },
     {
       "city": "Łódź",
-      "temp": 0
+      "temp": -1
     },
     {
       "city": "Olsztyn",
@@ -90,7 +90,7 @@
     },
     {
       "city": "Warszawa",
-      "temp": -1
+      "temp": -2
     },
     {
       "city": "Wrocław",
