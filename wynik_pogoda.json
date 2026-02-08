@@ -1,13 +1,13 @@
 {
   "main": {
-    "temp": -0.18,
-    "feels_like": -3.31,
-    "temp_min": -0.18,
-    "temp_max": -0.18,
-    "pressure": 1008,
+    "temp": -1.18,
+    "feels_like": -5,
+    "temp_min": -1.18,
+    "temp_max": -1.18,
+    "pressure": 1010,
     "humidity": 100,
-    "sea_level": 1008,
-    "grnd_level": 982
+    "sea_level": 1010,
+    "grnd_level": 983
   },
   "weather": [
     {
@@ -18,8 +18,8 @@
     }
   ],
   "wind": {
-    "speed": 2.57,
-    "deg": 50
+    "speed": 3.09,
+    "deg": 70
   },
   "sys": {
     "type": 1,
@@ -34,7 +34,7 @@
   "woj": [
     {
       "city": "Białystok",
-      "temp": -3
+      "temp": -2
     },
     {
       "city": "Bydgoszcz",
@@ -66,7 +66,7 @@
     },
     {
       "city": "Olsztyn",
-      "temp": -2
+      "temp": -3
     },
     {
       "city": "Opole",
@@ -78,7 +78,7 @@
     },
     {
       "city": "Rzeszów",
-      "temp": 0
+      "temp": -1
     },
     {
       "city": "Szczecin",
